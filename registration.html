@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Đăng Kí</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Slide Login Form template Responsive, Login form web template, Flat Pricing tables, Flat Drop downs Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+	 <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+		var ck_name=/^[A-Za-z0-9]{3,20}$/;
+         var ck_email=/^([\w-]+(?:\.[w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+         var ck_phone=/^[0-9]{10,12}$/;
+         function validate()
+         {
+            var name=form.Name.value;
+            var email=form.Email.value;
+            var phone=form.Phone.value;
+            var errors=[];
+            if(!ck_name.test(name))
+            {
+               errors[errors.length]="You valid name.";
+            }
+            if(!ck_email.test(email))
+            {
+               errors[errors.length]="You must be a valid email(xxx@xx.xx)";
+            }
+            if(!ck_phone.test(phone))
+            {
+               errors[errors.length]="You must be a valid phone(0-9)"
+            }
+            if(errors.length>0)
+            {
+               reportErrors(errors);
+               return false;
+            }
+            return true;
+         }
+         function reportErrors(errors)
+         {
+            var msg="Please Enter Valid Data...\n";
+            for(var i=0; i<errors.length; i++)
+            {
+               var numError=i+1;
+               msg+="\n"+numError+". "+errors[i];
+            }
+            alert(msg);
+         }
+		
+    </script>
+
+	<!-- Custom Theme files -->
+	<link href="Login/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="Login/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- //Custom Theme files -->
+
+	
+
+</head>
+<body>
+
+<!-- main -->
+<div class="w3layouts-main"> 
+	<div class="bg-layer">
+		<h1>Đăng kí tài khoản</h1>
+		<a class="linkSs" href="index.html"><h4>Về Trang Chủ</h4></a>
+		<div class="header-main">
+			<div class="main-icon">
+				<span class="fa fa-eercast"></span>
+			</div>
+			
+			<div class="header-left-bottom">
+				<form action="#" method="post" onSubmit="return validate();">
+					<div class="icon1">
+						<span class="fa fa-user"></span>
+						<input type="email" name="Email" placeholder="Địa chỉ mail" required=""/>
+					</div>
+					
+					<div class="icon1">
+						<span class="fa fa-lock"></span>
+						<input type="password" placeholder="Mật khẩu" required=""/>
+					</div>
+					<div class="icon1">
+						<span class="fa fa-lock"></span>
+						<input type="password" placeholder="Nhập lại mật khẩu" required=""/>
+					</div>
+					<div class="login-check">
+						 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i> Nhớ mật khẩu</label>
+					</div>
+					<div class="bottom">
+						<button class="btn">Đăng kí</button>
+					</div>
+					<div class="links">
+						
+						<p class="right"><a href="Login1.html">Đã có tài khoản? Đăng nhập ngay</a></p>
+						<div class="clear"></div>
+					</div>
+				</form>	
+			</div>
+			<div class="social">
+				<ul>
+					<li>Hoặc đăng nhập: </li>
+					<li><a href="#" class="facebook"><span class="fa fa-facebook"></span></a></li>
+					<li><a href="#" class="twitter"><span class="fa fa-twitter"></span></a></li>
+					<li><a href="#" class="google"><span class="fa fa-google-plus"></span></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- copyright -->
+		<div class="copyright">
+			<p>© 2019 Chi Chi Golean Detox . All rights reserved | Design by TranTrungKien</p>
+		</div>
+		<!-- //copyright --> 
+	</div>
+</div>	
+<!-- //main -->
+
+</body>
+</html>
